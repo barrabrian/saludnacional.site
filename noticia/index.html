@@ -852,7 +852,7 @@
 
     </main>
 
-    <section class="custom-social-proof" id="hid3">
+    <!-- <section class="custom-social-proof" id="hid3">
        <div class="custom-notification">
          <div class="custom-notification-container">
            <div class="custom-notification-image-wrapper">
@@ -866,7 +866,7 @@
          </div>
        </div>
      </section>
-    <script src="js/notification.js" charset="utf-8"></script>
+    <script src="js/notification.js" charset="utf-8"></script> -->
 
 
     <footer>
@@ -928,32 +928,32 @@
       var utm_medium = new URL(document.location).searchParams.get("utm_medium");
 
 
-
-      var i = -1;
-      function getName() {
-        i++;
-        var names = document.getElementsByClassName('text-[#365899]');
-        if ( i < names.length) {
-          var aux = names[i].innerHTML.split(' ').length;
-          var b = true;
-          for (var j = 0; j < aux; j++) {
-            if (names[i].innerHTML.split(' ')[j] != '' && names[i].innerHTML.split(' ')[j] != '\n' && b){
-              document.getElementById("nameJS").innerHTML = names[i].innerHTML.split(' ')[j];
-              b = false;
-            }
-          }
-        } else {
-          i = 0;
-          var aux = names[i].innerHTML.split(' ').length;
-          var b = true;
-          for (var j = 0; j < aux; j++) {
-            if (names[i].innerHTML.split(' ')[j] != '' && names[i].innerHTML.split(' ')[j] != '\n' && b){
-              document.getElementById("nameJS").innerHTML = names[i].innerHTML.split(' ')[j];
-              b = false;
-            }
-          }
-        }
-      }
+      // 
+      // var i = -1;
+      // function getName() {
+      //   i++;
+      //   var names = document.getElementsByClassName('text-[#365899]');
+      //   if ( i < names.length) {
+      //     var aux = names[i].innerHTML.split(' ').length;
+      //     var b = true;
+      //     for (var j = 0; j < aux; j++) {
+      //       if (names[i].innerHTML.split(' ')[j] != '' && names[i].innerHTML.split(' ')[j] != '\n' && b){
+      //         document.getElementById("nameJS").innerHTML = names[i].innerHTML.split(' ')[j];
+      //         b = false;
+      //       }
+      //     }
+      //   } else {
+      //     i = 0;
+      //     var aux = names[i].innerHTML.split(' ').length;
+      //     var b = true;
+      //     for (var j = 0; j < aux; j++) {
+      //       if (names[i].innerHTML.split(' ')[j] != '' && names[i].innerHTML.split(' ')[j] != '\n' && b){
+      //         document.getElementById("nameJS").innerHTML = names[i].innerHTML.split(' ')[j];
+      //         b = false;
+      //       }
+      //     }
+      //   }
+      // }
 
 
 
