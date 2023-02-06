@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- ALTERAR INFOS DA PÁGINA -->
+    <meta name="author" content="oelez">
+    <link rel="shortcut icon" type="image/x-icon" href="svg/online.ico">
+    <title>Noticia</title>
+    <link href="https://saludnacional.site/noticia/" rel="canonical">
+    <!-- /ALTERAR INFOS DA PÁGINA -->
+
+    <!-- ALTERAR METAS DE COMPARTILHAMENTO -->
+    <meta property="og:locale" content="es">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Noticia">
+    <meta property="og:url" content="https://saludnacional.site/noticia">
+    <meta property="og:image" content="">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="350">
+    <!-- /ALTERAR METAS DE COMPARTILHAMENTO -->
+
+    <!-- ALTERAR METAS DE COMPARTILHAMENTO TWITTER -->
+    <meta name="twitter:title" content="Noticia">
+    <meta name="twitter:site" content="https://saludnacional.site/noticia">
+    <meta name="twitter:image" content="">
+    <!-- /ALTERAR METAS DE COMPARTILHAMENTO TWITTER -->
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/player.css" rel="stylesheet">
+    <link href="css/notification.css" rel="stylesheet">
+
+    <script src="https://cdn.plyr.io/3.6.12/plyr.polyfilled.js"></script>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FEVETJMV62"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FEVETJMV62');
+    </script>
+
+    <script type="text/javascript">
+      // document.addEventListener('contextmenu', event => event.preventDefault());
+
+      function setCookie(cname, cvalue) {
+        document.cookie = cname + "=" + cvalue + ";path=/";
+      }
+
+      function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+
+    </script>
+
+    <script>
+      (async () => {
+        const endpoint = `json`;
+        const url = `https://wtfismyip.com/${endpoint}`
+
+        const response = await fetch(url);
+        const data = await response.json();
+
+        var cloak_country = data.YourFuckingCountryCode;
+        var trfclid_check = new URL(document.location).searchParams.get("utm_source");
+        // console.log(trfclid_check);
+        if (cloak_country !== "BR" && trfclid_check !== "" && trfclid_check !== null && trfclid_check !== "{{campaign.name}}") {
+          document.querySelector('#app').style.display = "block";
+        } else {
+          // setCookie("has_blocked" , "yes");
+        }
+
+      })();
+    </script>
+
+    <!-- <style>#app {display: none;}</style> -->
+
+
+    <!-- Meta Pixel Code -->
+
+    <!-- End Meta Pixel Code -->
+
+  </head>
+  <body id="app">
+    <section id="navbar">
+      <div class="wrapper">
+        <div style="color: white; padding: 17px 0 15px 0;">
+          <center>
+            Tú y algunas personas cercanas a <b style=""><span id="locationJS"></span></b> fueron seleccionados para ver esta receta.
+          </center>
+        </div>
+      </div>
+    </section>
+    <main>
+      <div class="wrapper">
+        <center>
+          <img src="img/headline-leve.webp" class="img-headline" alt="">
+          <div class="small-mobile">Mira hasta el final, este video saldrá del aire el <span style="color: red;" id="dateJS"></span>.</div>
+        </center>
+        <br>
+        <div class="video">
+
+          <figure class="image is-16by9 px-6" style="padding: 0 !important;margin: 0;">
+            <div class="" data-plyr="play" id="player">
+              <iframe
+                class="has-ratio" width="640" height="360"
+                src="https://www.youtube.com/embed/1zYM5t98bXs?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                allowtransparency
+                allow="autoplay"
+                style="border: 0; max-width: 100%;"
+              ></iframe>
+              <div class="first-layer" onClick="stopVideo();player.toggleControls(); player.togglePlay();">
+                <div class="box">
+                  <center>
+                    <span class="fl-span">Tu video ya comenzó</span>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="96.75px" height="80.563px" viewBox="7.999 9.062 46.75 32.563" enable-background="new 7.999 9.062 46.75 32.563" xml:space="preserve">
+                      <style>@-webkit-keyframes BLINK {0% { opacity: 0; }33% { opacity: 1; }66% { opacity: 1; }100% { opacity: 0; }}@keyframes BLINK {0% { opacity: 0; }33% { opacity: 1; }66% { opacity: 1; }100% { opacity: 0; }}.blink_1 {-webkit-animation: BLINK 2s infinite;animation: BLINK 2s infinite;opacity: 0;} .blink_2 {-webkit-animation: BLINK 2s infinite .3s;animation: BLINK 2s infinite .3s;opacity: 0;}.blink_3 {-webkit-animation: BLINK 2s infinite .6s;animation: BLINK 2s infinite .6s;opacity: 0;}.smartplay-svg-color {fill: #FFFFFF !important;}.adjustable {border: 4px solid red;}</style>
+                      <g class="adjustable fg">
+                      <path class="smartplay-svg-color" d="M53.249,39.616c-0.186,0-0.371-0.051-0.537-0.157l-43.5-27.75c-0.466-0.297-0.603-0.916-0.306-1.381c0.298-0.466,0.917-0.601,1.381-0.306l43.5,27.75c0.467,0.297,0.604,0.916,0.307,1.381C53.901,39.453,53.579,39.616,53.249,39.616z"></path><path class="blink_3 smartplay-svg-color" d="M48.896,33.467l1.699,1.085c3.497-7.791,2.073-17.271-4.313-23.659c-0.391-0.391-1.023-0.391-1.414,0s-0.391,1.023,0,1.414C50.581,18.019,51.913,26.463,48.896,33.467z"></path>
+                      <path class="blink_3 smartplay-svg-color" d="M46.926,36.956c-0.612,0.863-1.286,1.695-2.059,2.469c-0.392,0.391-0.392,1.023,0,1.414c0.194,0.195,0.45,0.293,0.707,0.293c0.256,0,0.512-0.098,0.706-0.293c0.878-0.878,1.642-1.824,2.333-2.807L46.926,36.956z"></path><path class="blink_2 smartplay-svg-color" d="M42.543,29.415l1.777,1.135c1.545-5.315,0.229-11.293-3.953-15.476c-0.392-0.391-1.023-0.391-1.414,0c-0.392,0.391-0.392,1.023,0,1.414C42.454,19.987,43.639,24.925,42.543,29.415z"></path>
+                      <path class="blink_2 smartplay-svg-color" d="M41,33.174c-0.563,0.94-1.235,1.837-2.047,2.646c-0.391,0.392-0.391,1.023,0,1.414c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293c0.916-0.914,1.676-1.924,2.317-2.984L41,33.174z"></path><path class="blink_1 smartplay-svg-color" d="M35.771,25.094l2.003,1.277c0.012-0.203,0.029-0.404,0.029-0.609c0-3.079-1.2-5.974-3.381-8.153c-0.391-0.391-1.022-0.391-1.414,0c-0.391,0.391-0.391,1.023,0,1.414C34.652,20.666,35.613,22.802,35.771,25.094z"></path>
+                      <path class="blink_1 smartplay-svg-color" d="M35.084,29.401c-0.474,1.145-1.172,2.197-2.076,3.1c-0.391,0.391-0.391,1.023,0,1.414c0.195,0.195,0.451,0.293,0.707,0.293c0.257,0,0.513-0.098,0.707-0.293c1.008-1.006,1.795-2.17,2.361-3.43L35.084,29.401z"></path><polygon class="smartplay-svg-color" points="28.124,20.215 28.124,14.991 24.635,17.99  "></polygon><path class="smartplay-svg-color" d="M20.921,20.366h-6.423c-0.553,0-1,0.508-1,1.135v8.229c0,0.627,0.447,1.135,1,1.135h7.375l6.25,5.875V24.96L20.921,20.366z"></path>
+                      </g>
+                    </svg>
+                    <span class="fl-span">Haga clíc para escuchar</span>
+                  </center>
+                </div>
+              </div>
+              <!-- <div class="progress-bar" id="progress-bar"></div> -->
+              <div id="p"></div>
+            </div>
+          </figure>
+
+          <script src="js/player.js" charset="utf-8"></script>
+
+          <br>
+          <div style="margin-top: 10px;color: black;">
+            <center><span id="number"></span> personas viendo ahora...</center>
+            <script>
+              function add(){number+=Math.floor((Math.random()*6)+1);document.getElementById("number").innerHTML=number;setTimeout("add()",10000);}
+              function generate(){number=Math.floor(Math.random()*543)+278;document.getElementById("number").innerHTML=number;add();}
+              generate();
+            </script>
+          </div>
+
+
+
+          <br>
+          <div id="hid" align="center" style="" class="">
+            <button target="_self" class="button linkCheckout link-stored cta" data-theme="button" onclick="redirect()">
+              ¡SÍ! ¡QUIERO LOS TÓNICOS!
+              <!-- <small> <em>(atención: ultimas unidades disponibles)</em> </small> -->
+            </button>
+            <a class="linkCheckout mt-2" onclick="redirect()">¡Haz Clic Para Añadir al Carrito!</a>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="division-YXFLrh6735275__wrapper">
+        <style>
+          #division-YXFLrh6735275 {
+          position: relative;
+          padding: 3vh 20vw 3vh 20vw;
+          background-color: #fff;
+          }
+          #division-YXFLrh6735275 p {
+            margin: auto 0;
+          }
+          @media (max-width:1200px) {
+          #division-YXFLrh6735275 {
+          padding: 2.25vh 15vw 2.25vh 15vw;
+          }
+          }
+          @media (max-width:600px) {
+          #division-YXFLrh6735275 {
+          padding: 1.5vh 1.5vw 1.5vh 1.5vw;
+          }
+          }
+        </style>
+        <div id="division-YXFLrh6735275" class="JmEAJM7018041">
+          <style>.px-1{padding-left:4px;padding-right:4px}.pt-0.5{padding-top:2px}.mt-4{margin-top:16px}@media (min-width:640px){.sm\:text-sm{font-size:14px;line-height:20px}}.mt-2{margin-top:8px}.mb-2{margin-bottom:8px}.flex{display:flex}.w-full{width:100%}.space-x-1>:not([hidden])~:not([hidden]){margin-left:.25rem}.items-center{align-items:center}.font-\[Helvetica\]{font-family:Helvetica,Arial,sans-serif}.cursor-pointer{cursor:pointer}.rounded-full{border-radius:99999px}.h-12{height:48px}.w-12{width:48px}.flex-col{flex-direction:column}.py-1{padding-top:4px;padding-bottom:4px}.px-3{padding-left:12px;padding-right:12px}.pl-0\.5,.px-0\.5{padding-left:2px}.rounded-\[18px\]{border-radius:18px}.bg-stone-100{background-color:#f5f5f4}.px-0\.5{padding-right:2px}.font-semibold{font-weight:600}.text-\[\#365899\]{color:#365899}.text-\[13px\]{font-size:13px}.leading-4{line-height:16px}.hover\:underline:hover{text-decoration-line:underline}.text-sm{font-size:14px}.relative{position:relative}.justify-between{justify-content:space-between}.grow{flex-grow:1}.text-xs{font-size:12px}.text-\[\#90949c\]{color:#90949c}.ml-px{margin-left:1px}.gap-1{gap:4px}.w-fit{width:fit-content}.hidden{display:none}.-mt-1{margin-top:-4px}.-mt-2{margin-top:-8px}.mr-2{margin-right:8px}.h-4,.h-5{height:16px}.drop-shadow{--tw-drop-shadow:drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06));filter:var(--tw-drop-shadow)}.bg-slate-50{background-color:#f8fafc}.py-0\.5{padding-top:2px;padding-bottom:2px}.pr-1{padding-right:4px}.block{display:block}.w-4{width:16px}.z-10{z-index:10}.-ml-1{margin-left:-4px}.ml-4{margin-left:16px}.gap-x-0\.5{column-gap:2px}.mr-0\.5{margin-right:2px;margin-left:2px}.border-l{border:none;border-left-width:1px}.border-slate-300{border-color:#cbd5e1}.border-dotted{}.ml-5{margin-left:20px}.h-8{height:32px}.w-8{width:32px}.h-10{height:40px}.w-10{width:40px}@media (min-width:640px){.sm\:w-16{width:64px}.sm\:ml-12{margin-left:48px}}.pl-2{padding-left:8px}</style>
+          <div class="fbComments-HEWNYj0361716" style="margin-left:auto;margin-right:auto">
+            <style>
+              .fbComments-HEWNYj0361716-element {
+              padding: 16px;
+              border-radius:20px;
+              background-color:#fff;
+              color: black;
+              }
+              .fbComments-HEWNYj0361716-element p, .fbComments-HEWNYj0361716-element span {
+              font-family: 'Helvetica', 'Arial', sans-serif;
+              }
+            </style>
+            <div id="testimonials" class="fbComments-HEWNYj0361716-element">
+              <p class="text-xs sm:text-sm leading-4 font-semibold mb-2">
+                Mostrando 15 comentarios
+              </p>
+              <div class="mb-2">
+                <div class="flex w-full space-x-1 items-center font-[Helvetica]">
+                  <img src="https://img.imageboss.me/atm/cdn/u/M0KZJThO8oXlNg1fcTbml3Jc0p82/l/DgniYz6063348.png" class="cursor-pointer rounded-full h-10 w-10">
+                  <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
+                    <div class="px-0.5 py-1">
+                      <p class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline">
+                        Maria Perez
+                      </p>
+                      <p class="text-sm leading-4 pt-0.5">
+                        Wow, estos consejos son maravillosos, me alegro de haber visto el video hasta el final, me gustó, muchas gracias. Un fuerte abrazo desde <span class="md" id="local1"></span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w-full justify-between">
+                  <div class="w-12 sm:w-16"></div>
+                  <div class="grow flex gap-1 text-xs pt-0.5">
+                    <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">
+                      Me gusta
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">
+                      Responder
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
+                      <p class="text-xs text-[#90949c]">
+                        1
+                      </p>
+                      <p class="text-[#90949c] ">h</p>
+                    </div>
+                  </div>
+                  <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
+                    <img class="w-4 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
+                    <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
+                    <span class="text-xs text-[#90949c] pt-0.5">
+                    59
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="border-l border-slate-300 border-dotted ml-5 sm:ml-12 pl-2 mb-2">
+                <div class="flex w-full space-x-1 items-center">
+                  <img src="https://img.imageboss.me/atm/cdn/u/M0KZJThO8oXlNg1fcTbml3Jc0p82/l/HHcANN6081683.png" class="cursor-pointer rounded-full h-8 w-8">
+                  <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
+                    <div class="px-0.5 py-1">
+                      <p class="font-semibold text-[#365899] text-xs cursor-pointer hover:underline">
+                        Patrícia Gonzales
+                      </p>
+                      <p class="text-sm leading-4 pt-0.5">
+                        Yo tambien soy de <span class="md" id="local2"></span>, mi amiga me había hablado de este video y tenía muchas ganas de verlo.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w-full justify-between">
+                  <div class="w-10 sm:w-16"></div>
+                  <div class="grow flex gap-1 text-xs">
+                    <p class="font-semibold hover:underline cursor-pointer text-[#90949c]">
+                      Me gusta
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <p class="font-semibold hover:underline cursor-pointer text-[#90949c]">
+                      Responder
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
+                      <p class="text-xs text-[#90949c]">
+                        1
+                      </p>
+                      <p class="text-[#90949c] ">min</p>
+                    </div>
+                  </div>
+                  <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
+                    <img class="w-4 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
+                    <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
+                    <span class="text-xs text-[#90949c] pt-0.5">
+                    29
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-2">
+                <div class="flex w-full space-x-1 items-center font-[Helvetica]">
+                  <img src="https://img.imageboss.me/atm/cdn/u/M0KZJThO8oXlNg1fcTbml3Jc0p82/l/tYFrgD6076985.png" class="cursor-pointer rounded-full h-10 w-10">
+                  <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
+                    <div class="px-0.5 py-1">
+                      <p class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline">
+                        Fabricia Martinez
+                      </p>
+                      <p class="text-sm leading-4 pt-0.5">
+                        Ya estoy poniendo todo en práctica y realmente funciona, no ha pasado ni una semana y ha pasado de 90 a 85. Gracias por compartirlo con nosotros.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w-full justify-between">
+                  <div class="w-12 sm:w-16"></div>
+                  <div class="grow flex gap-1 text-xs pt-0.5">
+                    <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">
+                      Me gusta
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">
+                      Responder
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
+                      <p class="text-xs text-[#90949c]">
+                        1
+                      </p>
+                      <p class="text-[#90949c] ">h</p>
+                    </div>
+                  </div>
+                  <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
+                    <img class="w-4 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
+                    <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
+                    <span class="text-xs text-[#90949c] pt-0.5">
+                    83
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-2">
+                <div class="flex w-full space-x-1 items-center font-[Helvetica]">
+                  <img src="https://img.imageboss.me/atm/cdn/u/M0KZJThO8oXlNg1fcTbml3Jc0p82/l/lfAxpb6074289.png" class="cursor-pointer rounded-full h-10 w-10">
+                  <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
+                    <div class="px-0.5 py-1">
+                      <p class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline">
+                        Silvia Rocio
+                      </p>
+                      <p class="text-sm leading-4 pt-0.5">
+                        Mi prima me mostró este video hace 15 días, y me encantó, realmente funciona, me siento como una mujer nueva, mucho más dispuesta y feliz cuando me veo en el espejo.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w-full justify-between">
+                  <div class="w-12 sm:w-16"></div>
+                  <div class="grow flex gap-1 text-xs pt-0.5">
+                    <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">
+                      Me gusta
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">
+                      Responder
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
+                      <p class="text-xs text-[#90949c]">
+                        1
+                      </p>
+                      <p class="text-[#90949c] ">h</p>
+                    </div>
+                  </div>
+                  <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
+                    <img class="w-4 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
+                    <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
+                    <span class="text-xs text-[#90949c] pt-0.5">
+                    109
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="border-l border-slate-300 border-dotted ml-5 sm:ml-12 pl-2 mb-2">
+                <div class="flex w-full space-x-1 items-center">
+                  <img src="https://img.imageboss.me/atm/cdn/u/M0KZJThO8oXlNg1fcTbml3Jc0p82/l/fgbYri6071266.png" class="cursor-pointer rounded-full h-8 w-8">
+                  <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
+                    <div class="px-0.5 py-1">
+                      <p class="font-semibold text-[#365899] text-xs cursor-pointer hover:underline">
+                        Natalia Fernandez
+                      </p>
+                      <p class="text-sm leading-4 pt-0.5">
+                        Yo tambien estoy muy feliz.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w-full justify-between">
+                  <div class="w-10 sm:w-16"></div>
+                  <div class="grow flex gap-1 text-xs">
+                    <p class="font-semibold hover:underline cursor-pointer text-[#90949c]">
+                      Me gusta
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <p class="font-semibold hover:underline cursor-pointer text-[#90949c]">
+                      Responder
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
+                      <p class="text-xs text-[#90949c]">
+                        1
+                      </p>
+                      <p class="text-[#90949c] ">min</p>
+                    </div>
+                  </div>
+                  <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
+                    <img class="w-4 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
+                    <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
+                    <span class="text-xs text-[#90949c] pt-0.5">
+                    60
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-2">
+                <div class="flex w-full space-x-1 items-center font-[Helvetica]">
+                  <img src="https://img.imageboss.me/atm/cdn/u/M0KZJThO8oXlNg1fcTbml3Jc0p82/l/fgbYri6071266.png" class="cursor-pointer rounded-full h-10 w-10">
+                  <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
+                    <div class="px-0.5 py-1">
+                      <p class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline">
+                        Natalia Fernandez
+                      </p>
+                      <p class="text-sm leading-4 pt-0.5">
+                        Había perdido varias prendas porque ya no me quedan bien, después de ver este video hace una semana más o menos, ya estoy usando mis viejos jeans nuevamente.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w-full justify-between">
+                  <div class="w-12 sm:w-16"></div>
+                  <div class="grow flex gap-1 text-xs pt-0.5">
+                    <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">
+                      Me gusta
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">
+                      Responder
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
+                      <p class="text-xs text-[#90949c]">
+                        1
+                      </p>
+                      <p class="text-[#90949c] ">h</p>
+                    </div>
+                  </div>
+                  <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
+                    <img class="w-4 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
+                    <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
+                    <span class="text-xs text-[#90949c] pt-0.5">
+                    32
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="border-l border-slate-300 border-dotted ml-5 sm:ml-12 pl-2 mb-2">
+                <div class="flex w-full space-x-1 items-center">
+                  <img src="https://img.imageboss.me/atm/cdn/u/M0KZJThO8oXlNg1fcTbml3Jc0p82/l/HHcANN6081683.png" class="cursor-pointer rounded-full h-8 w-8">
+                  <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
+                    <div class="px-0.5 py-1">
+                      <p class="font-semibold text-[#365899] text-xs cursor-pointer hover:underline">
+                        Patrícia Gonzales
+                      </p>
+                      <p class="text-sm leading-4 pt-0.5">
+                        Eso es genial amigo, también estoy usando pantalones cortos otra vez.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w-full justify-between">
+                  <div class="w-10 sm:w-16"></div>
+                  <div class="grow flex gap-1 text-xs">
+                    <p class="font-semibold hover:underline cursor-pointer text-[#90949c]">
+                      Me gusta
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <p class="font-semibold hover:underline cursor-pointer text-[#90949c]">
+                      Responder
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
+                      <p class="text-xs text-[#90949c]">
+                        1
+                      </p>
+                      <p class="text-[#90949c] ">min</p>
+                    </div>
+                  </div>
+                  <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
+                    <img class="w-4 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
+                    <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
+                    <span class="text-xs text-[#90949c] pt-0.5">
+                    79
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-2">
+                <div class="flex w-full space-x-1 items-center font-[Helvetica]">
+                  <img src="https://img.imageboss.me/atm/cdn/u/M0KZJThO8oXlNg1fcTbml3Jc0p82/l/odmLPc6065700.png" class="cursor-pointer rounded-full h-10 w-10">
+                  <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
+                    <div class="px-0.5 py-1">
+                      <p class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline">
+                        Valentina Vaz
+                      </p>
+                      <p class="text-sm leading-4 pt-0.5">
+                        ¿Realmente funciona?
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w-full justify-between">
+                  <div class="w-12 sm:w-16"></div>
+                  <div class="grow flex gap-1 text-xs pt-0.5">
+                    <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">
+                      Me gusta
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">
+                      Responder
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
+                      <p class="text-xs text-[#90949c]">
+                        1
+                      </p>
+                      <p class="text-[#90949c] ">h</p>
+                    </div>
+                  </div>
+                  <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
+                    <img class="w-4 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
+                    <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
+                    <span class="text-xs text-[#90949c] pt-0.5">
+                    38
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="border-l border-slate-300 border-dotted ml-5 sm:ml-12 pl-2 mb-2">
+                <div class="flex w-full space-x-1 items-center">
+                  <img src="https://img.imageboss.me/atm/cdn/u/M0KZJThO8oXlNg1fcTbml3Jc0p82/l/lfAxpb6074289.png" class="cursor-pointer rounded-full h-8 w-8">
+                  <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
+                    <div class="px-0.5 py-1">
+                      <p class="font-semibold text-[#365899] text-xs cursor-pointer hover:underline">
+                        Silvia Rocio
+                      </p>
+                      <p class="text-sm leading-4 pt-0.5">
+                        Con absoluta certeza mi amigo, mira el video hasta el final y te sorprenderás
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w-full justify-between">
+                  <div class="w-10 sm:w-16"></div>
+                  <div class="grow flex gap-1 text-xs">
+                    <p class="font-semibold hover:underline cursor-pointer text-[#90949c]">
+                      Me gusta
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <p class="font-semibold hover:underline cursor-pointer text-[#90949c]">
+                      Responder
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
+                      <p class="text-xs text-[#90949c]">
+                        1
+                      </p>
+                      <p class="text-[#90949c] ">h</p>
+                    </div>
+                  </div>
+                  <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
+                    <img class="w-4 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
+                    <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
+                    <span class="text-xs text-[#90949c] pt-0.5">
+                    14
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="border-l border-slate-300 border-dotted ml-5 sm:ml-12 pl-2 mb-2">
+                <div class="flex w-full space-x-1 items-center">
+                  <img src="https://img.imageboss.me/atm/cdn/u/M0KZJThO8oXlNg1fcTbml3Jc0p82/l/tYFrgD6076985.png" class="cursor-pointer rounded-full h-8 w-8">
+                  <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
+                    <div class="px-0.5 py-1">
+                      <p class="font-semibold text-[#365899] text-xs cursor-pointer hover:underline">
+                        Fabricia Martinez
+                      </p>
+                      <p class="text-sm leading-4 pt-0.5">
+                        De verdad, no te arrepentirás, yo también tenía dudas pero le di una oportunidad y vi el video, fue realmente transformador.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w-full justify-between">
+                  <div class="w-10 sm:w-16"></div>
+                  <div class="grow flex gap-1 text-xs">
+                    <p class="font-semibold hover:underline cursor-pointer text-[#90949c]">
+                      Me gusta
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <p class="font-semibold hover:underline cursor-pointer text-[#90949c]">
+                      Responder
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
+                      <p class="text-xs text-[#90949c]">
+                        1
+                      </p>
+                      <p class="text-[#90949c] ">h</p>
+                    </div>
+                  </div>
+                  <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
+                    <img class="w-4 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
+                    <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
+                    <span class="text-xs text-[#90949c] pt-0.5">
+                    74
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="border-l border-slate-300 border-dotted ml-5 sm:ml-12 pl-2 mb-2">
+                <div class="flex w-full space-x-1 items-center">
+                  <img src="https://img.imageboss.me/atm/cdn/u/M0KZJThO8oXlNg1fcTbml3Jc0p82/l/odmLPc6065700.png" class="cursor-pointer rounded-full h-8 w-8">
+                  <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
+                    <div class="px-0.5 py-1">
+                      <p class="font-semibold text-[#365899] text-xs cursor-pointer hover:underline">
+                        Valentina Vaz
+                      </p>
+                      <p class="text-sm leading-4 pt-0.5">
+                        Gracias chicas
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w-full justify-between">
+                  <div class="w-10 sm:w-16"></div>
+                  <div class="grow flex gap-1 text-xs">
+                    <p class="font-semibold hover:underline cursor-pointer text-[#90949c]">
+                      Me gusta
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <p class="font-semibold hover:underline cursor-pointer text-[#90949c]">
+                      Responder
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
+                      <p class="text-xs text-[#90949c]">
+                        1
+                      </p>
+                      <p class="text-[#90949c] ">min</p>
+                    </div>
+                  </div>
+                  <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
+                    <img class="w-4 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
+                    <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
+                    <span class="text-xs text-[#90949c] pt-0.5">
+                    51
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-2">
+                <div class="flex w-full space-x-1 items-center font-[Helvetica]">
+                  <img src="https://img.imageboss.me/atm/cdn/u/M0KZJThO8oXlNg1fcTbml3Jc0p82/l/xStxie6060718.png" class="cursor-pointer rounded-full h-10 w-10">
+                  <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
+                    <div class="px-0.5 py-1">
+                      <p class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline">
+                        Petala Silmara
+                      </p>
+                      <p class="text-sm leading-4 pt-0.5">
+                        Vuelvo aquí para agradecerles, después de ver este video el mes pasado, pasé del agua al vino, me siento mucho más feliz, mi esposo siempre me alaba, me encanta todo.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w-full justify-between">
+                  <div class="w-12 sm:w-16"></div>
+                  <div class="grow flex gap-1 text-xs pt-0.5">
+                    <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">
+                      Me gusta
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">
+                      Responder
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
+                      <p class="text-xs text-[#90949c]">
+                        1
+                      </p>
+                      <p class="text-[#90949c] ">min</p>
+                    </div>
+                  </div>
+                  <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
+                    <img class="w-4 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
+                    <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
+                    <span class="text-xs text-[#90949c] pt-0.5">
+                    101
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="border-l border-slate-300 border-dotted ml-5 sm:ml-12 pl-2 mb-2">
+                <div class="flex w-full space-x-1 items-center">
+                  <img src="https://img.imageboss.me/atm/cdn/u/M0KZJThO8oXlNg1fcTbml3Jc0p82/l/odmLPc6065700.png" class="cursor-pointer rounded-full h-8 w-8">
+                  <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
+                    <div class="px-0.5 py-1">
+                      <p class="font-semibold text-[#365899] text-xs cursor-pointer hover:underline">
+                        Valentina Vaz
+                      </p>
+                      <p class="text-sm leading-4 pt-0.5">
+                        No puedo esperar a que me pase a mí también, estoy deseando que llegue
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w-full justify-between">
+                  <div class="w-10 sm:w-16"></div>
+                  <div class="grow flex gap-1 text-xs">
+                    <p class="font-semibold hover:underline cursor-pointer text-[#90949c]">
+                      Me gusta
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <p class="font-semibold hover:underline cursor-pointer text-[#90949c]">
+                      Responder
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
+                      <p class="text-xs text-[#90949c]">
+                        1
+                      </p>
+                      <p class="text-[#90949c] ">min</p>
+                    </div>
+                  </div>
+                  <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
+                    <img class="w-4 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
+                    <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
+                    <span class="text-xs text-[#90949c] pt-0.5">
+                    84
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="border-l border-slate-300 border-dotted ml-5 sm:ml-12 pl-2 mb-2">
+                <div class="flex w-full space-x-1 items-center">
+                  <img src="https://img.imageboss.me/atm/cdn/u/M0KZJThO8oXlNg1fcTbml3Jc0p82/l/lfAxpb6074289.png" class="cursor-pointer rounded-full h-8 w-8">
+                  <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
+                    <div class="px-0.5 py-1">
+                      <p class="font-semibold text-[#365899] text-xs cursor-pointer hover:underline">
+                        Silvia Rocio
+                      </p>
+                      <p class="text-sm leading-4 pt-0.5">
+                        Me alegro por ti amiga, que maravilla
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w-full justify-between">
+                  <div class="w-10 sm:w-16"></div>
+                  <div class="grow flex gap-1 text-xs">
+                    <p class="font-semibold hover:underline cursor-pointer text-[#90949c]">
+                      Me gusta
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <p class="font-semibold hover:underline cursor-pointer text-[#90949c]">
+                      Responder
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
+                      <p class="text-xs text-[#90949c]">
+                        1
+                      </p>
+                      <p class="text-[#90949c] ">min</p>
+                    </div>
+                  </div>
+                  <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
+                    <img class="w-4 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
+                    <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
+                    <span class="text-xs text-[#90949c] pt-0.5">
+                    71
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-2">
+                <div class="flex w-full space-x-1 items-center font-[Helvetica]">
+                  <img src="https://img.imageboss.me/atm/cdn/u/M0KZJThO8oXlNg1fcTbml3Jc0p82/l/SovzgP6057767.png" class="cursor-pointer rounded-full h-10 w-10">
+                  <div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
+                    <div class="px-0.5 py-1">
+                      <p class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline">
+                        Quezia Olivars
+                      </p>
+                      <p class="text-sm leading-4 pt-0.5">
+                        Mi esposo ya ni me buscaba, cuando mi amiga dijo que me encantaría este video no lo creí, pero de verdad estoy transformada.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w-full justify-between">
+                  <div class="w-12 sm:w-16"></div>
+                  <div class="grow flex gap-1 text-xs pt-0.5">
+                    <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">
+                      Me gusta
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <p class="font-semibold cursor-pointer hover:underline text-[#90949c]">
+                      Responder
+                    </p>
+                    <p class="text-[#90949c]">·</p>
+                    <div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
+                      <p class="text-xs text-[#90949c]">
+                        1
+                      </p>
+                      <p class="text-[#90949c] ">min</p>
+                    </div>
+                  </div>
+                  <div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
+                    <img class="w-4 block" src="https://img.imageboss.me/atm/cdn/p/l.png">
+                    <img class="w-4 -ml-1 mr-0.5" src="https://img.imageboss.me/atm/cdn/p/h.png">
+                    <span class="text-xs text-[#90949c] pt-0.5">
+                    111
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <p class="text-xs sm:text-sm leading-4 font-semibold mt-4" style="color:#555;text-align:center;">
+                Debes iniciar sesión para dejar un comentario.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="wrapper">
+        <div id="hid2" align="center" style="" class="">
+          <button target="_self" class="button linkCheckout link-stored cta" data-theme="button" onclick="redirect()">
+            ¡SÍ! ¡QUIERO LOS TÓNICOS!
+            <!-- <small> <em>(atención: ultimas unidades disponibles)</em> </small> -->
+          </button>
+          <a class="linkCheckout mt-2" onclick="redirect()">¡Haz Clic Para Añadir al Carrito!</a>
+        </div>
+      </div>
+
+
+    </main>
+
+    <section class="custom-social-proof" id="hid3">
+       <div class="custom-notification">
+         <div class="custom-notification-container">
+           <div class="custom-notification-image-wrapper">
+             <svg style="margin-right:5px;color:green;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" class="bi bi-patch-check-fill" viewBox="0 0 16 16"> <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"></path> </svg>
+           </div>
+           <div class="custom-notification-content-wrapper">
+             <p class="custom-notification-content">
+               <span id="nameJS">Camila</span> recibió los tónicos
+             </p>
+           </div>
+         </div>
+       </div>
+     </section>
+    <script src="js/notification.js" charset="utf-8"></script>
+
+
+    <footer>
+      <br>
+      <!-- <p>
+        <b>La piratería es un DELITO</b>
+        <br>
+        La venta de Protocolo Anti-Grasa solo se puede realizar a través de este sitio. Cualquier otro sitio web en el que encuentre este programa es FALSO e ilegal. Evite la falsificación y rechace el contenido ilegal o pirateado. NO compre programas similares que no se basen en años de estudio en psicología del comportamiento. No somos responsables de las compras realizadas en otros sitios web.
+      </p> -->
+      <!-- <p>Este material refleja única y exclusivamente la opinión del profesional y fue elaborado de forma independiente.
+      </p> -->
+      <p>
+        <a href="../policy/index.html" target="_blank">Política de Privacidad</a>
+        | <a href="../terms/index.html" target="_blank">Terminos de Uso</a>
+        <br>
+        Copyright ©  2023
+      </p>
+      <p>La información disponible en este sitio es estrictamente periodística y no reemplaza el consejo médico profesional. Siempre consulte a su médico sobre cualquier asunto relacionado con su salud y sus tratamientos y medicamentos.</p>
+    </footer>
+
+    <!-- <script src="https://ssl.geoplugin.net/javascript.gp?k=292af9fb00c1353d" type="text/javascript"></script> -->
+
+    <script src="js/lanvtackt.js" charset="utf-8"></script>
+
+
+    <script type="text/javascript">
+
+      const date = new Date();
+      var month = ("0" + (date.getMonth() + 1)).slice(-2);
+      var day = ("0" + (date.getDate())).slice(-2);
+      document.getElementById("dateJS").innerHTML = day + "/" + month + "/" + date.getFullYear();
+
+      var geo_city = "";
+      var geo_countryCode = "";
+
+
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+
+            geo_city = JSON.parse(this.response).YourFuckingCity;
+            geo_countryCode = JSON.parse(this.response).YourFuckingCountryCode;
+
+
+            document.getElementById("locationJS").innerHTML = geo_city;
+            document.getElementById("local1").innerHTML = geo_city;
+            document.getElementById("local2").innerHTML = geo_city;
+         }
+      };
+      xhttp.open("GET", "https://wtfismyip.com/json", true);
+      xhttp.send();
+
+
+      var url_string = window.location.href;
+      var url = new URL(url_string);
+      var utm_source = new URL(document.location).searchParams.get("utm_source");
+      var utm_campaign = new URL(document.location).searchParams.get("utm_campaign");
+      var utm_content = new URL(document.location).searchParams.get("utm_content");
+      var utm_medium = new URL(document.location).searchParams.get("utm_medium");
+
+
+
+      var i = -1;
+      function getName() {
+        i++;
+        var names = document.getElementsByClassName('text-[#365899]');
+        if ( i < names.length) {
+          var aux = names[i].innerHTML.split(' ').length;
+          var b = true;
+          for (var j = 0; j < aux; j++) {
+            if (names[i].innerHTML.split(' ')[j] != '' && names[i].innerHTML.split(' ')[j] != '\n' && b){
+              document.getElementById("nameJS").innerHTML = names[i].innerHTML.split(' ')[j];
+              b = false;
+            }
+          }
+        } else {
+          i = 0;
+          var aux = names[i].innerHTML.split(' ').length;
+          var b = true;
+          for (var j = 0; j < aux; j++) {
+            if (names[i].innerHTML.split(' ')[j] != '' && names[i].innerHTML.split(' ')[j] != '\n' && b){
+              document.getElementById("nameJS").innerHTML = names[i].innerHTML.split(' ')[j];
+              b = false;
+            }
+          }
+        }
+      }
+
+
+
+    </script>
+  </body>
+</html>
